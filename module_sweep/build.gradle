@@ -23,6 +23,3 @@ dependencies {
 
     api files('libs/core-3.0.0.jar')
 }
-
-//打包到maven库
-apply from: './tutu-push.gradle'

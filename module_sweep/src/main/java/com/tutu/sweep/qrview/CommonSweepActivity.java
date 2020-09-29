@@ -78,6 +78,7 @@ public abstract class CommonSweepActivity extends AppCompatActivity implements C
     public abstract void handleResult(Result result, Bitmap barcode);
 
     public void handleDecode(Result result, Bitmap barcode) {
+        // 处理扫码成功后是否还继续扫码
         inactivityTimer.onActivity();
         playBeepSoundAndVibrate();
         handleResult(result, barcode);
@@ -132,33 +133,6 @@ public abstract class CommonSweepActivity extends AppCompatActivity implements C
         inactivityTimer.shutdown();
         super.onDestroy();
     }
-
-//    public void handleDecode(Result result, Bitmap barcode) {
-//        inactivityTimer.onActivity();
-//        playBeepSoundAndVibrate();
-//        String resultString = result.getText();
-//        if (TextUtils.isEmpty(resultString)) {
-////            ToastUtils.show("二维码错误");
-//        } else {
-//            Bundle bundle = new Bundle();
-//            if (isHomeSweep) {
-//                if(resultString.startsWith("http")) {
-//                    mResultString = resultString;
-//                    presenter.checkSweepUrl(this, resultString);
-//                    return;
-//                } else {
-//                    bundle.putString("result", resultString);
-//                    GoPageUtil.goPage(this, SweepResultActivity.class, bundle);
-//                }
-//            } else {
-//                Intent resultIntent = new Intent();
-//                bundle.putString("result", resultString);
-//                resultIntent.putExtras(bundle);
-//                this.setResult(RESULT_OK, resultIntent);
-//            }
-//        }
-//        QrActivity.this.finish();
-//    }
 
     private void initCamera(SurfaceHolder surfaceHolder) {
         try {
