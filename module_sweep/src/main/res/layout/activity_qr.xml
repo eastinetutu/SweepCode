@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <SurfaceView
+        android:id="@+id/activity_qr_surface_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center" />
+
+    <com.tutu.sweep.qrview.view.ViewfinderView
+        android:id="@+id/activity_qr_view_finder_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="27dp"
+            android:gravity="center"
+            android:text="@string/sweep_title_name"
+            android:textColor="@android:color/white"
+            android:textSize="16dp" />
+
+        <ImageView
+            android:id="@+id/tv_left_btn_activity_qr"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="24dp"
+            android:src="@mipmap/icon_qr_close" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
+

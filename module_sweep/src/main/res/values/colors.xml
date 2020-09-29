@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 扫码的颜色 -->
+    <color name="result_view">#b0000000</color>
+    <color name="viewfinder_mask">#00000000</color>
+    <color name="possible_result_points">#c0ffff00</color>
+    <color name="background_color_black">#bb000000</color>
+    <color name="stroke_color">#ffacac</color>
+    <color name="stroke_gray_color">#cccccc</color>
+    <color name="text_color">#666666</color>
+    <color name="stock_red">#0780ED</color>
+
+</resources>
